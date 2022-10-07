@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Send Message with the help of Twilio </title>
+</head>
+<body>
+<center><p>Welcome to the website where you can send free sms</p>
+<h1>Please click the button. It will send a sms to the number entered in twi.py</h1>
+<!-- Create a form to submit request-->
+<form action="/sendmessage" method="GET">
+<input type="submit" value="Send message">
+</form>
+
+<!-- Flash a message -->
+  {% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul class=flashes>
+		{% for message in messages %}
+		  <li>{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+ </center>
+</body>
+</html>
